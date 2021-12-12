@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button {
+            width: 8rem;
+            height: 2rem;
+            font-size: 1.5rem;
+        }
+        .counter {
+            font-size: 2rem;
+        }
+    </style>
+    <script src="html.with.min.js"></script>
+    <script defer>
+        const counter = $$("span", " 0", { classList: "counter" });
+        const but = $$("button", "Click me!", { classList: "button",
+            onclick: ev => {
+                counter.innerText = ' ' + String(Number(counter.innerText) + 1);
+            }
+        });
+        document.querySelector("main").appendChild(but);
+        document.querySelector("main").appendChild(counter);
+    </script>
+</head>
+<body>
+    <main></main>
+</body>
+</html>
