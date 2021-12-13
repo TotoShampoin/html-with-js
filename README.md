@@ -40,6 +40,7 @@ $$(tagName, content, options);
 >  -  events, as functions
 > ```js
 > {
+>     width: 240,
 >     classList: ["button--blue", "button--big"],
 >     dataset: { "but-id": "18" },
 >     style: { fontSize: "2rem", width: "12rem", height: "3rem" },
