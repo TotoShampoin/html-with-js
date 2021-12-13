@@ -47,6 +47,11 @@ $$(tagName, content, options);
 > }
 > ```
 
+By default, the aruments are
+```js
+$$("div", "", {});
+```
+
 ## Example
 ```js
 const first_line = $$("p", "Hello!");
