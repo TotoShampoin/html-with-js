@@ -16,18 +16,21 @@
         }
     </style>
     <script src="html.with.min.js"></script>
-    <script defer>
-        const counter = $$("span", " 0", { classList: "counter" });
-        const but = $$("button", "Click me!", { classList: "button",
-            onclick: ev => {
-                counter.innerText = ' ' + String(Number(counter.innerText) + 1);
-            }
-        });
-        document.querySelector("main").appendChild(but);
-        document.querySelector("main").appendChild(counter);
-    </script>
 </head>
 <body>
-    <main></main>
+    <script>
+        let count = 0;
+        const _main = $$("main");
+        const _counter = $$("span", " 0", { classList: "counter" });
+        const _but = $$("button", "Click me!", { classList: "button",
+            onclick: ev => {
+                count++;
+                _counter.innerText = ' ' + count;
+            }
+        });
+        _main.append(_but);
+        _main.append(_counter);
+        document.body.append(_main);
+    </script>
 </body>
 </html>
